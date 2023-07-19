@@ -25,6 +25,8 @@ public class Item_Creator : MonoBehaviour
         logic = Logic_Manager.GetComponent<Logic_Script>();
         newItem = new Logic_Script.item(Icon, nameText, Name, Count, countText, increaseAmount, timeToProduce, ProductionSlider, FillSpeed, BuyButton, Price);
         System.Console.WriteLine();
+        newItem.TargetFill = 0;
+        newItem.produce();
     }
 
     // Update is called once per frame
